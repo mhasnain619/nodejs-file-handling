@@ -1,12 +1,14 @@
-const { error, log } = require("console")
 const fs = require("fs")
+const os = require("os")
+
+console.log(os.cpus.length);
 
 
-//sync
-//  const result =  fs.writeFileSync("./test.txt", "Hey there")
+// sync Blocking Request
+// const result = fs.writeFileSync("./test.txt", "Hey there")
 // console.log(result);
 
-//async
+// async Non-Blocking request
 
 // fs.writeFile("./test.txt", "Hey there async", (error) => (error))
 
@@ -24,6 +26,19 @@ const fs = require("fs")
 // })
 
 
-fs.appendFileSync("./test.txt", `${Date.now()}Hey there\n`)
+// fs.appendFileSync("./test.txt", `${Date.now()}Hey there\n`)
 
-fs.copyFileSync("./test.txt", "./copy.txt")
+// sync Blocking Request
+// console.log(1);
+// const result = fs.readFileSync("contact.txt", "utf-8")
+// console.log(result);
+// console.log(2);
+
+// sync Non-Blocking Request
+
+
+// console.log(1);
+// fs.readFile("contact.txt", "utf-8", (err, result) => {
+//     console.log(result);
+// })
+// console.log(2);
